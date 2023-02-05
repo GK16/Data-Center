@@ -8,11 +8,12 @@ PUBCPP = /home/guikai/proj/Data-Center/public/_public.cpp
 CFLAGS = -g
 
 
-all:crtsurfdata1
+all:crtsurfdata
 
-crtsurfdata1: crtsurfdata1.cpp
-	g++ $(CFLAGS) -o crtsurfdata1 crtsurfdata1.cpp $(PUBLIC) $(PUBCPP) -lm -lc
-	cp crtsurfdata1 ../bin/.
+crtsurfdata: crtsurfdata.cpp
+	g++ $(CFLAGS) -o crtsurfdata crtsurfdata.cpp $(PUBLIC) $(PUBCPP) -lm -lc
+	cp crtsurfdata ../bin/.
 
 clean:
-	rm crtsurfdata1
+	rm crtsurfdata
+	rm -rf log
